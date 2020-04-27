@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c533697fc6bd3f4fb309cdda8c322c5, type: 3}
+  m_Name: BlueFish
+  m_EditorClassIdentifier: 
+  name: "\u0421\u0438\u043D\u044F\u044F \u0440\u044B\u0431\u0430"
+  description: "\u041E\u041F\u0418\u0421\u0410\u041D\u0418\u0415 \u041D\u0418"
+  prefab: {fileID: 1133073152311111584, guid: 1f50ae4463c07f541970c761693a1d96, type: 3}
+  prefabUI: {fileID: 8790956563844521178, guid: c5bd078fd6a34e4409449913c13fb83f,
+    type: 3}
+  price: 1000
+  colour: {r: 1, g: 0, b: 0, a: 0}

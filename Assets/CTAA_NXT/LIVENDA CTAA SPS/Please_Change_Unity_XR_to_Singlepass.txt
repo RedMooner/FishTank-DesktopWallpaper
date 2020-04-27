@@ -1,0 +1,3 @@
+Please_Change_Unity_XR_to_Singlepass render mode
+
+For Best Quality and Performance In general we STRONGLY recommend the use of the Dedicated version per HMD, such as the Oculus version for Oculus and VIVE version for VIVE. If you like to support both, then use the VIVE version, which is OPENVR and supports all VR Devices. The SPS (Single Pass Stereo) version should only be used if you must use a single camera, The SPS version Quality is slightly lower due to Precision Issues.

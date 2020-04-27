@@ -1,0 +1,86 @@
+CTAA NXT V2.1 CHANGES and FIXES
+
+- OPENVR (VIVE) Multipass VR :: Quality improvement and performance gains by eliminating 4-dependent texture reads
+
+- SPS VR (Single Pass Stereo VR) :: Quality improvement and performance gains by eliminating 4-dependent texture reads
+
+
+NEXT GENERATION CTAA NXT V2 UPDATES CHANGES and FIXES
+
+- CTAA NXT V2 NEXT GENERATION VERSION is a Major upgrade from the previous version.
+
+- 2 METHODS OF CUSTOM LAYER SELECTION ADDED! You can now Exlude CTAA Temporal Anti-Aliasing from any Object or GUI Elements and it's Easy! When using the new Supersampling addition, custom layer selection script can be used, if not, the default method should be used  which is explained in the Documentation Update file.
+
+- Layer Exclusion works for All versions including all VR versions, so it is easy to eg. exclude the GUI elements from CTAA for crisp and clear UI
+
+- All other thirdparty Post effects such as the Unity Post processing Stack V2 works with layer exclusions
+
+- 2 SUPERSAMPLING Methods, CinaSoft and CinaUltra Added. These can be used together with CTAA at the same time to achieve the Ultimate Anti-Aliasing for very Demanding scenes and true next-gen AAA look.
+
+- CTAA for PC now checks resolution changes automatically and scales all required render targets, eliminating dark outline anomalies and proving a much more robust usage workflow.
+
+- CTAA PC GUI is updated, MSAA can now be controled from within CTAA UI
+
+- More Demo scenes added for each version for PC and VR outlining the new updates and usage methods.
+
+- More prefabs added for quick start for PC and VR. Prefabs are also available for layer selection setup
+
+- Single Pass VR mode is now Clearer with more accurate motion vectors
+
+
+
+
+CTAA V1.9 UPDATE CHANGES and FIXES
+
+- General Improvements to all variations for PC and VR
+- Oculus VR better sharpness
+- Improved integration for latest SteamVR (OpenVR)
+- Tooltips added
+
+CTAA V1.8 UPDATE CHANGES and FIXES
+
+- V1.8 Brings Important Fixes and we strongly encourage all users to upgrade to this version asap
+
+- FIXED : Screen Edge Smearing artifacts on PC and VR Version. Sometimes depending on the scene and average contrast levels, there was a smearing/ghosting artifacts visible on screen edges, this is now completely fixed and eliminated.
+
+- FIXED : Black pixels / line artifacts on some scenes caused by high dynamic range differences between adjacent pixels during AABB evaluation
+
+- FIXED : Black pixel / line artifacts caused by irrelevent motion vectors on initial start / changing resolution and/or while enable/disabling CTAA
+
+- UPDATE : Microshimmer adjustment is now automated and not required in the UI
+
+- UPDATE : Adaptive Sharpness on PC version has been much improved, significantly less edge darkening while improving sharpness quality. 
+
+- UPDATE : Single Pass Stereo VR (SPS) quality improvement with better sharpness
+
+- UPDATE : Anti-Shimmer mode is OFF by Default and when resetting the plugin as it is not for general use. The prefabs have also been updated to reflect this.
+
+- IMPROVEMENT : PC CTAA responds much much better on Nature and Foliage related scenes as Unity does not provide vertex based motion vectors for wind animation
+
+
+CTAA V1.7 UPDATE CHANGES and FIXES
+
+- Significant Performance and Quality enhancement for All variants
+
+- NEW ANTI-SHIMMER MODE added to PC Version, completely eliminates micro-shimmer,  Suitable for Architectural   Visualization, CAD, Engineering, Auto, Design and Manufacture or for any project requiring the Highest Quality Visuals.
+
+- NEW Adaptive Sharpness mode in Steam VR version increasing perceptual sharpness with almost zero performance impact
+
+- Overall much better Visual quality improvement in Steam VR / OpenVR mode compatible with Oculus and the VIVE hmd's
+
+- NEW Adaptive Sharpness mode in Single Pass Stereo VR version increasing perceptual sharpness with almost zero performance impact
+
+- Improved compatibility with Unity 2019.1
+
+- NEW 'Engine' PC Demo Added showing the new Anti-Shimmer Mode together with MSAA. This combination provides Industry leading highest quality Anti-Aliasing for your projects at the highest performance
+
+
+
+
+CTAA V1.6 UPDATE CHANGES and FIXES
+
+- Performance and Quality enhancement for SPS (SinglePass Stereo) VR
+- Compatibility for the Latest STEAM VR SDK (2.2.0)
+- Updated CameraRig Prefabs for SteamVR and Oculus to clarify and Simplify VR integration
+- Better Dynamic Objects Support including Characters in SPS and MultiPass VR modes (Please drag the equivalent Dynamic object script on to all non-static moving objects and on to each Mesh of Characters)
+
