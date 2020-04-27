@@ -17,7 +17,6 @@ public class ManagerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      Debug.Log(GlobalVar.livePaper);
         if (GlobalVar.livePaper)
         {
             canvas.SetActive(false);

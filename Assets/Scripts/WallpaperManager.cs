@@ -21,6 +21,7 @@ namespace LiveWallpaperCore
         public GameObject Graphy;
         public MainManager mainManager;
         public GameObject DebugConsole;
+        public GameObject Canvas;
         public FishUI fishUI;
         private bool hook = false;
         float oldTime;
@@ -49,13 +50,14 @@ namespace LiveWallpaperCore
         }
         void Hook()
         {
-
+            UnityEngine.Debug.Log("5");
             if (GlobalVar.OffWalling == "F1true")
             {
+                    UnityEngine.Debug.Log("6");
                 hook = true;
 
 
-
+                Canvas.SetActive(false);
                 ToggleLiveWallpaper(!flag);
                 GlobalVar.livePaper = true;
                 // flag = true;
@@ -69,15 +71,13 @@ namespace LiveWallpaperCore
              if (GlobalVar.OffWalling == "F1false")
             {
                 hook = true;
-                GlobalVar.livePaper = false;
-
+                Canvas.SetActive(true);
                 Noty.GetComponent<Animator>().Play(0);
+                  hook = false;
                 ToggleLiveWallpaper(false);
+                GlobalVar.livePaper = false;
                 File.WriteAllText("log.txt", null);
-                hook = false;
-                //MessageBox.Show("f1");
 
-                //flag = false;
             }
              if (GlobalVar.OffWalling == "ESC")
             {
@@ -131,6 +131,7 @@ namespace LiveWallpaperCore
                 string value = sr.ReadToEnd(); // значение лога
                 GlobalVar.OffWalling = value;
                 sr.Close();
+                UnityEngine.Debug.Log("Hook = " + hook);
                 if (hook == false) // проверка переменной если true то хоткей уже нажат и идет проверка если false то идет проверка на нажатие
                 {
                     Hook(); // проверка
@@ -156,24 +157,33 @@ namespace LiveWallpaperCore
             //decide if we need to enable or disable the live wallpaper.
             if (enable)
             {
-                GlobalVar.livePaper = true;
                 LiveWallpaper.Main.Enable(); //This is where the magic begins.
                 canvas.SetActive(false);
                 flag = true;
+                GlobalVar.livePaper = true;
+
             }
 
             if (enable == false)
             {
-                GlobalVar.livePaper = false;
                 canvas.SetActive(true);
                 flag = false;
+                GlobalVar.livePaper = false;
                 LiveWallpaper.Main.Disable(); //This is where the magic ends.
             }
 
 
             ReloadInterface();
         }
-
+        public void Btn_Toggle()
+        {
+            LiveWallpaper.Main.Enable(); //This is where the magic begins.
+            canvas.SetActive(false);
+            flag = true;
+            GlobalVar.livePaper = true;
+            File.WriteAllText("log.txt", "");
+            File.WriteAllText("log.txt", "btn_true");
+        }
         private void ReloadInterface()
         {
             //Setup the toggle to make it enable and disable the live wallpaper.
