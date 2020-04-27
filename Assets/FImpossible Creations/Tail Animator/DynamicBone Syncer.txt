@@ -1,0 +1,5 @@
+You can download from this link component which will sync Tail Animator with Dynamic Bone collision system.
+
+Syncer: https://drive.google.com/drive/u/0/folders/1RHeVvCxWVypjZzH6FXRI7_L_e18WPYNT
+
+Dynamic Bone: https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743
