@@ -25,6 +25,7 @@ namespace LiveWallpaperCore
         public FishUI fishUI;
         private bool hook = false;
         float oldTime;
+        public Rainity rainity;
         public bool flag = false;
         private void Start()
         {
@@ -53,7 +54,7 @@ namespace LiveWallpaperCore
             UnityEngine.Debug.Log("5");
             if (GlobalVar.OffWalling == "F1true")
             {
-                    UnityEngine.Debug.Log("6");
+                UnityEngine.Debug.Log("6");
                 hook = true;
 
 
@@ -68,30 +69,30 @@ namespace LiveWallpaperCore
                               // MessageBox.Show(hook.ToString());
 
             }
-             if (GlobalVar.OffWalling == "F1false")
+            if (GlobalVar.OffWalling == "F1false")
             {
                 hook = true;
                 Canvas.SetActive(true);
                 Noty.GetComponent<Animator>().Play(0);
-                  hook = false;
+                hook = false;
                 ToggleLiveWallpaper(false);
                 GlobalVar.livePaper = false;
                 File.WriteAllText("log.txt", null);
 
             }
-             if (GlobalVar.OffWalling == "ESC")
+            if (GlobalVar.OffWalling == "ESC")
             {
                 hook = true;
                 mainManager.Quit();
                 hook = false;
             }
-             if (GlobalVar.OffWalling == "K")
+            if (GlobalVar.OffWalling == "K")
             {
                 hook = true;
                 fishUI.KillFishes();
                 hook = false;
             }
-             if (GlobalVar.OffWalling == "=")
+            if (GlobalVar.OffWalling == "=")
             {
                 hook = true;
                 MoneyScript.money += 1000000;
@@ -177,12 +178,20 @@ namespace LiveWallpaperCore
         }
         public void Btn_Toggle()
         {
+            /*
             LiveWallpaper.Main.Enable(); //This is where the magic begins.
             canvas.SetActive(false);
             flag = true;
             GlobalVar.livePaper = true;
             File.WriteAllText("log.txt", "");
             File.WriteAllText("log.txt", "btn_true");
+            */
+            rainity.behindIcons = true;
+            GlobalVar.livePaper = true;
+            File.WriteAllText("log.txt", "");
+            File.WriteAllText("log.txt", "btn_true");
+            flag = true;
+            canvas.SetActive(false);
         }
         private void ReloadInterface()
         {
