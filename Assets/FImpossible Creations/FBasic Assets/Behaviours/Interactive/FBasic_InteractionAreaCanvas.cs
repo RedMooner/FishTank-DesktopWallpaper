@@ -57,7 +57,7 @@ namespace FIMSpace.Basics
             viewText.rectTransform.sizeDelta = new Vector2(500f, 300f);
             viewText.text = "[" + InteractionKey + "] " + textInCanvas;
 
-            if (InteractionCanvasesContainer == null )
+            if (InteractionCanvasesContainer == null)
             {
                 InteractionCanvasesContainer = new GameObject("Interaction Canvases-Container").transform;
             }
@@ -69,7 +69,7 @@ namespace FIMSpace.Basics
 
         protected override void UpdateIn()
         {
-            if ( !Focused )
+            if (!Focused)
             {
                 canvasGroup.alpha = 0f;
                 return;
@@ -109,7 +109,7 @@ namespace FIMSpace.Basics
 
             viewCanvas.gameObject.transform.position = transform.position + transform.TransformVector(canvasObjectOffset);
 
-            if ( InteractionKey != KeyCode.None ) viewText.text = "[" + InteractionKey + "] " + textInCanvas; else viewText.text = textInCanvas;
+            if (InteractionKey != KeyCode.None) viewText.text = "[" + InteractionKey + "] " + textInCanvas; else viewText.text = textInCanvas;
         }
 
         protected override void OnExit()

@@ -9,11 +9,11 @@ namespace FIMSpace.Basics
     /// </summary>
     public class FBasic_DestroyOthersWithMe : MonoBehaviour
     {
-        private List<Object> ToDestroyAfterDestroy;
+        private List<GameObject> ToDestroyAfterDestroy;
 
-        public void AddToDestroy(Object obj)
+        public void AddToDestroy(GameObject obj)
         {
-            if (ToDestroyAfterDestroy == null) ToDestroyAfterDestroy = new List<Object>();
+            if (ToDestroyAfterDestroy == null) ToDestroyAfterDestroy = new List<GameObject>();
 
             ToDestroyAfterDestroy.Add(obj);
         }

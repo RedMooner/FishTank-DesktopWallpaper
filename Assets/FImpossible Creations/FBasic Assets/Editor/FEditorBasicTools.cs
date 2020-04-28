@@ -103,7 +103,7 @@ namespace FIMSpace.FEditor
                 return;
             }
 
-            Object[] objects = Selection.objects;
+            GameObject[] objects = Selection.gameObjects;
 
             GameObject gameObjectCheck = objects[0] as GameObject;
             int i = iterationStartFrom;
@@ -126,7 +126,7 @@ namespace FIMSpace.FEditor
             }
             else
             {
-                foreach (Object o in objects)
+                foreach (GameObject o in objects)
                 {
                     string newName = o.name;
 
