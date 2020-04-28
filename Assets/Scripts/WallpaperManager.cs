@@ -64,7 +64,7 @@ namespace LiveWallpaperCore
                 // flag = true;
 
 
-                File.WriteAllText("log.txt", null);
+                File.WriteAllText("loge.txt", null);
                 hook = false; // переведим переменную в false чтобы продолжить поиск нажатия хоткея
                               // MessageBox.Show(hook.ToString());
 
@@ -77,7 +77,7 @@ namespace LiveWallpaperCore
                 hook = false;
                 ToggleLiveWallpaper(false);
                 GlobalVar.livePaper = false;
-                File.WriteAllText("log.txt", null);
+                File.WriteAllText("loge.txt", null);
 
             }
             if (GlobalVar.OffWalling == "ESC")
@@ -128,7 +128,7 @@ namespace LiveWallpaperCore
         {
             try
             {
-                StreamReader sr = new StreamReader("log.txt");
+                StreamReader sr = new StreamReader("loge.txt");
                 string value = sr.ReadToEnd(); // значение лога
                 GlobalVar.OffWalling = value;
                 sr.Close();
@@ -158,7 +158,7 @@ namespace LiveWallpaperCore
             //decide if we need to enable or disable the live wallpaper.
             if (enable)
             {
-                LiveWallpaper.Main.Enable(); //This is where the magic begins.
+                rainity.behindIcons = true;
                 canvas.SetActive(false);
                 flag = true;
                 GlobalVar.livePaper = true;
@@ -170,7 +170,7 @@ namespace LiveWallpaperCore
                 canvas.SetActive(true);
                 flag = false;
                 GlobalVar.livePaper = false;
-                LiveWallpaper.Main.Disable(); //This is where the magic ends.
+                rainity.behindIcons = false;
             }
 
 
@@ -187,11 +187,12 @@ namespace LiveWallpaperCore
             File.WriteAllText("log.txt", "btn_true");
             */
             rainity.behindIcons = true;
-            GlobalVar.livePaper = true;
-            File.WriteAllText("log.txt", "");
-            File.WriteAllText("log.txt", "btn_true");
-            flag = true;
-            canvas.SetActive(false);
+            rainity.borderless = true;
+            SetupDesktop.behindIcons = true;
+            Application.runInBackground = true;
+            SetupDesktop.Initialize();
+
+
         }
         private void ReloadInterface()
         {
