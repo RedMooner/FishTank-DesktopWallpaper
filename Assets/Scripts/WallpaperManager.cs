@@ -162,6 +162,11 @@ namespace LiveWallpaperCore
                 canvas.SetActive(false);
                 flag = true;
                 GlobalVar.livePaper = true;
+                rainity.behindIcons = true;
+                rainity.borderless = true;
+                SetupDesktop.behindIcons = true;
+                Application.runInBackground = true;
+                SetupDesktop.Initialize();
 
             }
 
@@ -171,6 +176,11 @@ namespace LiveWallpaperCore
                 flag = false;
                 GlobalVar.livePaper = false;
                 rainity.behindIcons = false;
+                rainity.borderless = false;
+                SetupDesktop.behindIcons = false;
+                Application.runInBackground = false;
+                SetupDesktop.Initialize();
+
             }
 
 
